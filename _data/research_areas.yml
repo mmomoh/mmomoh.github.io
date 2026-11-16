@@ -1,0 +1,56 @@
+# The six research areas, in the order they come up during an outbreak.
+items:
+- tab: Detect
+  figure: 91 / 90
+  caption: Percent agreement with PCR on positive and negative samples, ReEBOV prototype, banked Kenema samples
+  title: Point-of-care testing
+  text: Point-of-care tests matter most where there's no PCR lab and no reliable power. The authorized version of the Ebola test traded some sensitivity for specificity, which is why it screens and the reference lab confirms. Health workers need to know that before they rely on it.
+  evidence:
+  - label: Boisen et al., J Infect Dis 2016 (Ebola)
+    link: https://academic.oup.com/jid/article/214/suppl_3/S203/2388234
+  - label: Boisen et al., Sci Rep 2018 (Lassa)
+    link: https://doi.org/10.1038/s41598-018-24246-w
+- tab: Confirm
+  figure: 13 yrs
+  caption: Leading diagnostics at Sierra Leone's national VHF reference laboratory, 2009 to 2022
+  title: Reference laboratory diagnostics
+  text: Molecular and serologic confirmation under BSL-3/4 conditions, through Ebola, Lassa fever, and COVID-19. The same laboratory confirmed Sierra Leone's first Ebola case in May 2014, and it had to keep testing while its own staff fell ill.
+  evidence:
+  - label: Goba et al., J Infect Dis 2016
+    link: https://doi.org/10.1093/infdis/jiw239
+- tab: Sequence
+  figure: "99"
+  caption: Ebola virus genomes from 78 patients, sequenced in the first months of the outbreak
+  title: Genomic surveillance
+  text: Those genomes showed how Ebola entered Sierra Leone and how quickly it was changing. The same approach later traced Lassa virus and SARS-CoV-2, with the Broad Institute and ACEGID.
+  evidence:
+  - label: Gire et al., Science 2014
+    link: https://doi.org/10.1126/science.1259657
+  - label: Andersen et al., Cell 2015
+    link: https://doi.org/10.1016/j.cell.2015.07.020
+- tab: Record
+  figure: "25"
+  caption: Policy documents from WHO, CDC, and others citing the Kenema clinical outcomes paper
+  title: Clinical records
+  text: Kenema already kept careful records for Lassa fever patients. When the first Ebola patient arrived on May 25, 2014, the records continued, and they became some of the first detailed clinical data from the outbreak.
+  evidence:
+  - label: Schieffelin et al., NEJM 2014
+    link: https://doi.org/10.1056/NEJMoa1411680
+- tab: Understand
+  figure: 2 yrs
+  caption: How long neutralizing antibodies stayed high in a Sierra Leone survivor cohort
+  title: Survivor immunology
+  text: Survivors show what lasting protection looks like. My PhD work asks how their cellular and Fc-mediated immune responses change when they are vaccinated, and what that means for correlates of protection.
+  evidence:
+  - label: Bond et al., J Infect Dis 2024
+    link: https://doi.org/10.1093/infdis/jiae155
+  - label: Gunn et al., Immunity 2021
+    link: https://doi.org/10.1016/j.immuni.2021.03.009
+- tab: Build
+  figure: 500+
+  caption: Student research projects supervised at Eastern Technical University
+  title: Training
+  text: Thirteen years of teaching medical laboratory science, and more than 100 protocols and SOPs now used by labs and ministries.
+  evidence:
+  - label: WARN-ID interview, 2023
+    link: https://warn-id.org/chat-with-mambu-momoh-viral-hemorrhagic-fever-consortium-researcher-and-phd-student/

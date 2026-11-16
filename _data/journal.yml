@@ -1,0 +1,39 @@
+# Field journal, newest first. Image is optional.
+entries:
+- date: October 2026
+  title: 'New preprint: how Ebola reached healthcare workers at Kenema'
+  text: 'Seventy-nine healthcare workers at Kenema Government Hospital were infected with Ebola in 2014. We went back to the genomes from that outbreak to ask how the virus reached the people treating patients. The preprint combines genomic analysis of 279 viruses from Kenema District with firsthand accounts from colleagues who were on those wards, and shows Ebola spreading between clinical, laboratory and pharmacy staff. I co-led it with Christopher Shin, with the Broad Institute of MIT and Harvard, Tulane University, Scripps Research and the Liverpool School of Tropical Medicine. Preprint, not yet peer reviewed.'
+  link: https://www.medrxiv.org/content/10.64898/2026.10.26.26366557v1
+  link_text: Read the preprint on medRxiv
+  image: ''
+  image_alt: ''
+- date: November 2026
+  title: Presenting at ASTMH 2026, abstract 6200
+  text: Decade-Long Antigen-Resolved and Functional Antibody Trajectories Among Ebola Virus Survivors, Household Contacts, and Community Controls in Eastern Sierra Leone. Thursday, 19 November, 1:00 to 2:45 pm, Gaylord National Harbor, Maryland (adjacent to Washington, DC). Preliminary and not yet peer reviewed.
+  image: /assets/img/tropmed26.jpg
+  image_alt: 'ASTMH TropMed26 announcement graphic: Mambu Momoh is presenting at the ASTMH Annual Meeting, November 18 to 22, 2026, Gaylord National Harbor'
+- date: October 2026
+  title: Ten years of survivor follow-up, presented at the Tulane retreat
+  text: 155 Ebola survivors and 383 household contacts in Kenema and Kailahun, followed for close to ten years. Preliminary and not yet peer reviewed.
+  image: ''
+  image_alt: ''
+- date: March 2026
+  title: CRISPR/Cas12a assay for cytomegalovirus in infant saliva
+  text: Published in Scientific Reports with colleagues at Tulane, the Broad Institute, and Kenema. It met screening-test targets faster and more cheaply than PCR; quantification on field samples still needs work.
+  image: ''
+  image_alt: ''
+- date: October 2025
+  title: Lassa virus surveillance in household rodents
+  text: The 2023 preprint is now peer-reviewed in The Lancet Microbe.
+  image: ''
+  image_alt: ''
+- date: '2024'
+  title: Neutralizing antibodies persist two years after Ebola
+  text: A Sierra Leone survivor cohort study in The Journal of Infectious Diseases, which I co-authored.
+  image: ''
+  image_alt: ''
+- date: October 2023
+  title: Two posters at ASTMH
+  text: Lassa vaccine seroepidemiology, and antibody persistence in Ebola survivors.
+  image: ''
+  image_alt: ''

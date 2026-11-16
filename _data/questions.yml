@@ -1,0 +1,40 @@
+# Questions section. These answers are drafts. Set show_on_site to true only after you approve every answer.
+show_on_site: false
+intro: These five come up at most talks. People are asking them again in 2026, because the Bundibugyo outbreak in the DRC is now the second largest Ebola outbreak on record. WHO declared it a public health emergency of international concern in May.
+items:
+- question: After the horror of the outbreak, was there a silver lining?
+  answer:
+  - Some, and I try not to overstate them. Sierra Leone came out of 2014 with more laboratories able to test for Ebola in the country, more people trained to run them, and communities that learned to report illness early. The work done at Kenema during those months, the virus genomes and the clinical records, still shapes how outbreaks are handled.
+  - Those gains cost a great many lives. I would like to see them kept up between outbreaks, when funding and attention usually move elsewhere.
+  stamp: ''
+- question: What would you tell health workers and public health officials preparing for the next one?
+  answer:
+  - My first answer is staff. Equipment sits unused without trained people who are paid and kept on between outbreaks. Keep infection prevention habits when nothing is happening, because the first patient rarely arrives with a diagnosis. Build trust with communities before you need it. And keep the path from clinic to laboratory to response team short, so a suspected case is tested and reported the same day.
+  stamp: ''
+- question: Surveillance and monitoring matter for more than Ebola.
+  answer:
+  - They do, and Kenema is the example I use. The laboratory was set up for Lassa fever surveillance, and that is why it could confirm Ebola in 2014. Our 2025 study in The Lancet Microbe looked for Lassa virus in rodents living in and around homes, so the virus can be picked up in animals before people fall ill.
+  - 'Many countries now work to the 7-1-7 target: detect an outbreak within seven days, notify within one, and start the response within seven. Meeting it depends on testing fevers that aren''t malaria, sample transport that works, and data that moves the same day.'
+  stamp: ''
+- question: Which laboratories have been built in Africa recently, and which are planned?
+  answer:
+  - When I was asked this in 2022, most of the answer was COVID-era investment. In 2019 only seven African countries could do basic genomic sequencing; by 2026, 46 could. In Sierra Leone, sequencing runs at the Central Public Health Reference Laboratory in Lakka and at Kenema, and a new laboratory in Port Loko was set up with Institut Pasteur de Dakar during the 2025 mpox outbreak.
+  - Africa CDC's Pathogen Genomics Initiative aims to bring sequencing into every national public health institute, and an African genomic data archive, AGARI, launched in November 2025. The harder question is keeping these labs staffed and supplied once outside funding ends.
+  stamp: Updated October 2026
+- question: Could these centres help monitor other epidemic threats, such as arboviruses?
+  answer:
+  - 'Yes. A laboratory with PCR and sequencing for Ebola can test for dengue, yellow fever or chikungunya with new reagents and some training. It doesn''t need a new building. Institut Pasteur de Dakar is the model I point to: a WHO Collaborating Centre for both arboviruses and haemorrhagic fever viruses, and a yellow fever vaccine producer. The practical step is testing undiagnosed fevers against a panel of viruses instead of one at a time. That way an unexpected virus still gets picked up.'
+  stamp: ''
+sources:
+- label: WHO Disease Outbreak News, 22 May 2026
+  link: https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON603
+- label: UKHSA outbreaks under monitoring, 27 September 2026
+  link: https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-39-week-ending-27-september-2026
+- label: African Society for Laboratory Medicine, July 2026
+  link: https://aslm.org/strengthening-africas-laboratory-response-to-outbreaks-from-emergency-deployment-to-genomic-surveillance/
+- label: Mano Reporters, June 2025
+  link: https://manoreporters.com/news/health/sierra-leone-looks-set-to-increase-lab-capacity-with-more-potential-for-viral-sequencing/
+- label: 'Pasteur Network: Institut Pasteur de Dakar'
+  link: https://pasteur-network.org/who-we-are/our-network/institute/institut-pasteur-de-dakar
+- label: Smither et al., The Lancet Microbe 2025
+  link: https://doi.org/10.1016/j.lanmic.2025.101188

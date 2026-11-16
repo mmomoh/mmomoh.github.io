@@ -1,0 +1,18 @@
+# Numbers in the Research record section. Update the values and the note when citations change.
+stats:
+- value: '45'
+  label: peer-reviewed journal papers
+  source: Listed under Publications
+- value: '5,423'
+  label: citations; h-index 31, i10-index 42
+  source: Google Scholar
+- value: '25'
+  label: h-index; 3,165 citations
+  source: Web of Science
+- value: '33'
+  label: citations from patents
+  source: Web of Science
+- value: '31'
+  label: policy documents citing the 2014 Science paper, including WHO and CDC
+  source: Altmetric
+note: Counts differ between indexes because each one covers a different set of journals.

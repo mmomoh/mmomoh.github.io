@@ -1,0 +1,6 @@
+title: Mambu Momoh
+description: Biomedical scientist working on diagnostics, genomic epidemiology, and immunology for Ebola, Lassa fever and other emerging infectious diseases.
+url: https://mmomoh.github.io
+plugins:
+  - jekyll-sitemap
+exclude: [README.md, .pages.yml]

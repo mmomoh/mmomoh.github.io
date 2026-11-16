@@ -1,0 +1,27 @@
+# The meeting notice shown in the bar at the top of the site and in the strip under your name.
+# The site reads the clock and picks the right wording by itself: before, on the day, during, after.
+# Set show to false to remove both the bar and the strip.
+show: true
+name: ASTMH 2026
+abstract: "6200"
+title: Decade-Long Antigen-Resolved and Functional Antibody Trajectories Among Ebola Virus Survivors, Household Contacts, and Community Controls in Eastern Sierra Leone
+note: Preliminary and not yet peer reviewed.
+when_text: Thursday 19 November 2026, 1:00 to 2:45 pm. On view from 8:30 am.
+place: Prince George's Exhibition Hall A, Gaylord National Harbor, Maryland
+find_text: Abstract 6200, Session A
+# Times are US Eastern (the meeting is in Maryland). Keep the -05:00 at the end.
+on_view_from: "2026-11-19T08:30:00-05:00"
+starts: "2026-11-19T13:00:00-05:00"
+ends: "2026-11-19T14:45:00-05:00"
+hide_after: "2026-12-20T00:00:00-05:00"
+# Wording for the bar at the very top.
+neutral_text: "ASTMH 2026: abstract 6200, Thursday 19 November, 1:00 to 2:45 pm"
+before_text: I am presenting abstract 6200 at ASTMH 2026 on Thursday 19 November, 1:00 to 2:45 pm
+onview_text: Abstract 6200 is on view today at ASTMH 2026. I will be at the board from 1:00 to 2:45 pm
+during_text: "I am at the board now: abstract 6200, Prince George's Exhibition Hall A, until 2:45 pm"
+after_text: I presented abstract 6200 at ASTMH 2026 on 19 November
+# Wording for the small line above the title in the strip.
+before_label: Coming up at ASTMH 2026
+onview_label: On view today at ASTMH 2026
+during_label: At the board now
+after_label: Presented at ASTMH 2026

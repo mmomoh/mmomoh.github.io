@@ -1,0 +1,68 @@
+# Collaborators: one row per institution. Leave paper and paper_link empty when there is no paper.
+rows:
+- institution: Kenema Government Hospital, Sierra Leone
+  people: Augustine Goba, Donald Grant, Sheik Humarr Khan
+  work: The laboratory and clinical teams of the Lassa fever program, where most of this work was done.
+  paper: Gire et al., Science 2014
+  paper_link: https://doi.org/10.1126/science.1259657
+  note: Sheik Humarr Khan led the hospital's Lassa fever program and died of Ebola in July 2014. He and four other Kenema co-authors of our 2014 Science paper died before it was published.
+- institution: Tulane University School of Medicine
+  people: Robert Garry, John Schieffelin, James Robinson
+  work: The Lassa fever program, clinical research and human monoclonal antibodies. Tulane is now where I am doing my PhD.
+  paper: Schieffelin et al., NEJM 2014
+  paper_link: https://doi.org/10.1056/NEJMoa1411680
+  note: ''
+- institution: Zalgen Labs
+  people: Matt Boisen, Luis Branco
+  work: The Ebola and Lassa rapid tests and recombinant antigen assays we validated at Kenema.
+  paper: Boisen et al., J Infect Dis 2016
+  paper_link: https://doi.org/10.1093/infdis/jiw261
+  note: ''
+- institution: Broad Institute of MIT and Harvard
+  people: Pardis Sabeti
+  work: Ebola and Lassa genome sequencing, and later CRISPR-based diagnostics for both viruses.
+  paper: Barnes et al., Nat Commun 2020
+  paper_link: https://doi.org/10.1038/s41467-020-17994-9
+  note: ''
+- institution: Scripps Research
+  people: Kristian Andersen, Kathryn Hastie, Michael Oldstone
+  work: Lassa virus genomics, and structural work on the Lassa glycoprotein.
+  paper: Andersen et al., Cell 2015
+  paper_link: https://doi.org/10.1016/j.cell.2015.07.020
+  note: ''
+- institution: La Jolla Institute for Immunology
+  people: Erica Ollmann Saphire
+  work: Structural and antibody work on the Lassa and Ebola glycoproteins. We started working together when her lab was at Scripps Research, and we still do.
+  paper: Robinson et al., Nat Commun 2016
+  paper_link: https://doi.org/10.1038/ncomms11544
+  note: ''
+- institution: University of Texas Medical Branch
+  people: Robert Cross, Thomas Geisbert, Chad Mire
+  work: Antibody therapy studies for Lassa fever, and analytical validation of the Ebola rapid test.
+  paper: Mire et al., Nature Medicine 2017
+  paper_link: https://doi.org/10.1038/nm.4396
+  note: ''
+- institution: ACEGID, Redeemer's University, Nigeria
+  people: Christian Happi
+  work: Genomic sequencing training, and Lassa virus genomics in Nigeria and Sierra Leone.
+  paper: Siddle et al., NEJM 2018
+  paper_link: https://doi.org/10.1056/NEJMoa1804498
+  note: ''
+- institution: Ragon Institute of MGH, MIT and Harvard; Washington State University
+  people: Galit Alter, Bronwyn Gunn
+  work: Fc-effector functions of antibodies in Ebola survivors.
+  paper: Gunn et al., Immunity 2021
+  paper_link: https://doi.org/10.1016/j.immuni.2021.03.009
+  note: ''
+- institution: US CDC, Special Pathogens Branch, Atlanta
+  people: ''
+  work: Training in Lassa fever IgM and IgG ELISA serology, 2019.
+  paper: ''
+  paper_link: ''
+  note: ''
+- institution: UC San Diego
+  people: Virgil Woods
+  work: Fellow member of the Viral Hemorrhagic Fever Consortium.
+  paper: ''
+  paper_link: ''
+  note: ''

@@ -1,0 +1,84 @@
+# Live data. When someone opens the site, it reads fresh figures from OpenAlex (citations, newest papers)
+# and from WHO Disease Outbreak News. What is saved below is the fallback shown if those services
+# cannot be reached. Switch either feed off with the two show lines.
+show_openalex: true
+show_who: true
+orcid: 0000-0001-7091-1027
+openalex_author: https://openalex.org/A5027091105
+snapshot_date: 15 November 2026
+openalex:
+  citations: '4,507'
+  h_index: '28'
+newest:
+- date: 28 October 2026
+  title: 'Ebola virus transmission among healthcare workers: genomic epidemiological analysis of the 2014 Kenema Government Hospital outbreak'
+  source: medRxiv, preprint
+  link: https://doi.org/10.64898/2026.10.26.26366557
+- date: 30 June 2026
+  title: 'Incidence of symptomatic Lassa virus infection in West African countries (Enable 1.0 Lassa Research Study): a prospective, multisite, cohort study'
+  source: The Lancet Global Health
+  link: https://doi.org/10.1016/s2214-109x(26)00090-2
+- date: 13 March 2026
+  title: Adaptable, quantitative CRISPR/Cas12a-based assay for cytomegalovirus DNA in infant saliva
+  source: Scientific Reports
+  link: https://doi.org/10.1038/s41598-026-43462-3
+who:
+- date: 6 November 2026
+  title: Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria
+  link: https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON625
+- date: 23 October 2026
+  title: Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria
+  link: https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON622
+- date: 8 October 2026
+  title: Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo
+  link: https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON619
+- date: 25 September 2026
+  title: Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo
+  link: https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON621
+citations:
+  10.1016/j.ophtha.2021.02.001: 12
+  10.3390/microorganisms9030586: 21
+  10.1016/j.dib.2019.01.021: 23
+  10.2217/fvl.15.41: 24
+  10.1186/1743-422x-7-306: 29
+  10.1016/s2214-109x(26)00090-2: 6
+  10.64898/2026.10.26.26366557: 0
+  10.1126/science.1259657: 1256
+  10.1056/nejmoa1411680: 549
+  10.1016/j.cell.2015.07.020: 310
+  10.1038/nm.4396: 138
+  10.1093/infdis/jiw261: 38
+  10.1038/s41467-020-17994-9: 187
+  10.1016/j.lanmic.2025.101188: 6
+  10.1038/s41598-026-43462-3: 0
+  10.1093/infdis/jiae155: 3
+  10.1038/s41564-023-01589-3: 11
+  10.1371/journal.pone.0283643: 28
+  10.1371/journal.pntd.0010938: 28
+  10.1038/s41467-022-33112-3: 96
+  10.1126/science.abq5358: 193
+  10.1371/journal.pntd.0010882: 16
+  10.1016/j.immuni.2021.03.009: 61
+  10.3390/v13112325: 37
+  10.3390/v13081605: 14
+  10.4269/ajtmh.20-0773: 27
+  10.3201/eid2611.191694: 27
+  10.1093/infdis/jiaa268: 23
+  10.1038/s41598-020-72539-w: 32
+  10.1128/jvi.00153-20: 30
+  10.1038/s41598-020-65736-0: 41
+  10.1371/journal.ppat.1008352: 42
+  10.1093/infdis/jiz364: 46
+  10.4102/ajlm.v9i2.1029: 7
+  10.1371/journal.pone.0214284: 22
+  10.1056/nejmoa1804498: 195
+  10.1073/pnas.1806200115: 66
+  10.1038/s41598-018-24246-w: 60
+  10.1016/j.ebiom.2018.03.020: 59
+  10.1093/infdis/jiw239: 37
+  10.1093/infdis/jiw293: 53
+  10.1038/ncomms11544: 170
+  10.1016/j.antiviral.2016.08.012: 79
+  10.1093/infdis/jiv353: 41
+  10.1089/vim.2014.0108: 47
+  10.1186/1743-422x-8-478: 91

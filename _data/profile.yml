@@ -1,0 +1,17 @@
+# Profile and contact details shown in the hero and the contact section.
+hero_line: Biomedical scientist working on diagnostics, genomic epidemiology, and immunology for Ebola, Lassa fever and other emerging infectious diseases.
+hero_text: I spent fifteen years in Sierra Leone's national Lassa and Ebola laboratory in Kenema, helping build the rapid tests, other diagnostics and genomic surveillance the region relies on. At Tulane University School of Medicine, I now study what survivors' immune systems remember, and what that means for vaccines.
+contact:
+- label: Email
+  value: mmomoh@tulane.edu
+  link: mmomoh@tulane.edu
+- label: Alternate email
+  value: mambumomoh@gmail.com
+  link: mambumomoh@gmail.com
+- label: LinkedIn
+  value: linkedin.com/in/mambu-momoh-8aa76387
+  link: https://www.linkedin.com/in/mambu-momoh-8aa76387/
+- label: ORCID
+  value: 0000-0001-7091-1027
+  link: https://orcid.org/0000-0001-7091-1027
+email_for_messages: mmomoh@tulane.edu

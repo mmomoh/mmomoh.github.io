@@ -1,0 +1,192 @@
+# Pages CMS configuration: https://pagescms.org
+# Sign in at app.pagescms.org with GitHub, open this repository, and edit each section as a form.
+media:
+  input: assets/img
+  output: /assets/img
+content:
+  - name: profile
+    label: Name line and contact
+    type: file
+    path: _data/profile.yml
+    fields:
+      - { name: hero_line, label: Line under your name, type: text }
+      - { name: hero_text, label: Introduction paragraph, type: text }
+      - { name: email_for_messages, label: Email that receives messages from the contact form, type: string }
+      - name: contact
+        label: Contact rows
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label (for example Email), type: string }
+          - { name: value, label: Text shown, type: string }
+          - { name: link, label: What the Copy button copies, type: string }
+  - name: event
+    label: Meeting notice (bar at the top and strip under your name)
+    type: file
+    path: _data/event.yml
+    fields:
+      - { name: show, label: Show the notice, type: boolean }
+      - { name: name, label: Meeting name, type: string }
+      - { name: abstract, label: Abstract number, type: string }
+      - { name: title, label: Title of the work, type: text }
+      - { name: note, label: Small note under the title, type: string }
+      - { name: when_text, label: When (shown in the strip), type: string }
+      - { name: place, label: Where, type: string }
+      - { name: find_text, label: How to find it, type: string }
+      - { name: on_view_from, label: "On view from (keep the format 2026-11-19T08:30:00-05:00)", type: string }
+      - { name: starts, label: Presenting from (same format), type: string }
+      - { name: ends, label: Presenting until (same format), type: string }
+      - { name: hide_after, label: Remove the notice after (same format), type: string }
+      - { name: neutral_text, label: Bar wording if the clock cannot be read, type: string }
+      - { name: before_text, label: Bar wording before the day, type: string }
+      - { name: onview_text, label: Bar wording on the morning, type: string }
+      - { name: during_text, label: Bar wording while you are presenting, type: string }
+      - { name: after_text, label: Bar wording afterwards, type: string }
+      - { name: before_label, label: Strip label before the day, type: string }
+      - { name: onview_label, label: Strip label on the morning, type: string }
+      - { name: during_label, label: Strip label while you are presenting, type: string }
+      - { name: after_label, label: Strip label afterwards, type: string }
+  - name: research_areas
+    label: Research areas (the six tabs)
+    type: file
+    path: _data/research_areas.yml
+    fields:
+      - name: items
+        label: Areas, in order
+        type: object
+        list: true
+        fields:
+          - { name: tab, label: Tab word, type: string }
+          - { name: figure, label: Large figure, type: string }
+          - { name: caption, label: What the figure counts, type: text }
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Paragraph, type: text }
+          - name: evidence
+            label: Evidence links
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Short citation, type: string }
+              - { name: link, label: Link, type: string }
+  - name: live
+    label: Live figures and feeds
+    type: file
+    path: _data/live.yml
+    fields:
+      - { name: show_openalex, label: Show live citation figures and newest papers (OpenAlex), type: boolean }
+      - { name: show_who, label: Show WHO outbreak notices, type: boolean }
+  - name: journal
+    label: Field journal
+    type: file
+    path: _data/journal.yml
+    fields:
+      - name: entries
+        label: Entries (newest first)
+        type: object
+        list: true
+        fields:
+          - { name: date, label: Date (for example November 2026), type: string }
+          - { name: title, label: Title, type: string }
+          - { name: link, label: Link (optional), type: string }
+          - { name: link_text, label: Link text (optional, defaults to Read it), type: string }
+          - { name: text, label: Text, type: text }
+          - { name: image, label: Image (optional), type: image }
+          - { name: image_alt, label: Image description for screen readers, type: string }
+  - name: talks
+    label: Other talks
+    type: file
+    path: _data/talks.yml
+    fields:
+      - name: other_talks
+        label: Talks
+        type: object
+        list: true
+        fields:
+          - { name: date, label: Date, type: string }
+          - { name: text, label: Talk and venue, type: text }
+  - name: publications
+    label: Publications
+    type: file
+    path: _data/publications.yml
+    fields:
+      - name: selected
+        label: Selected papers (shown first)
+        type: object
+        list: true
+        fields:
+          - { name: year, label: Year, type: string }
+          - { name: citation, label: Citation (keep "Momoh M." so it is bolded), type: text }
+          - { name: link, label: DOI link, type: string }
+      - name: more
+        label: More papers (behind the Show more button)
+        type: object
+        list: true
+        fields:
+          - { name: year, label: Year, type: string }
+          - { name: citation, label: Citation, type: text }
+          - { name: link, label: DOI link, type: string }
+  - name: research_record
+    label: Research record numbers
+    type: file
+    path: _data/research_record.yml
+    fields:
+      - name: stats
+        label: Numbers
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Number, type: string }
+          - { name: label, label: What it counts, type: string }
+          - { name: source, label: Source, type: string }
+      - { name: note, label: Note under the numbers, type: text }
+  - name: about
+    label: About
+    type: file
+    path: _data/about.yml
+    fields:
+      - { name: paragraphs, label: Paragraphs, type: text, list: true }
+      - name: at_a_glance
+        label: Facts list
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: value, label: Value, type: string }
+  - name: collaborators
+    label: Collaborators
+    type: file
+    path: _data/collaborators.yml
+    fields:
+      - name: rows
+        label: Institutions
+        type: object
+        list: true
+        fields:
+          - { name: institution, label: Institution, type: string }
+          - { name: people, label: People, type: string }
+          - { name: work, label: What we did together, type: text }
+          - { name: paper, label: Paper (short form), type: string }
+          - { name: paper_link, label: Paper link, type: string }
+          - { name: note, label: Extra note (optional), type: text }
+  - name: questions
+    label: Questions I'm often asked
+    type: file
+    path: _data/questions.yml
+    fields:
+      - { name: show_on_site, label: Show this section on the website, type: boolean }
+      - { name: intro, label: Introduction, type: text }
+      - name: items
+        label: Questions
+        type: object
+        list: true
+        fields:
+          - { name: question, label: Question, type: string }
+          - { name: answer, label: Answer paragraphs, type: text, list: true }
+          - { name: stamp, label: Date note (optional), type: string }
+      - name: sources
+        label: Sources
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Source name, type: string }
+          - { name: link, label: Link, type: string }
