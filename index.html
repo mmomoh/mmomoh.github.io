@@ -531,6 +531,94 @@ button.well:focus-visible{outline:2px solid #F3F6F7;outline-offset:2px}
 a.who-li{display:block;text-decoration:none;color:inherit}
 a.who-li h4{font-size:17.5px;line-height:1.3}
 a.who-li:hover h4{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- motion, 17 November 2026 ---------- */
+/* header gains a shadow once the page moves */
+.site{transition:box-shadow 300ms var(--ease-out)}
+.site.scrolled{box-shadow:0 10px 28px rgba(14,28,38,.08)}
+
+/* hero: after the name, each line arrives in turn */
+.hero .sub,.hero .body,.hero .btns,.hero .creds{animation:heroUp 780ms var(--ease-arrive) both}
+.hero .sub{animation-delay:260ms}.hero .body{animation-delay:360ms}.hero .btns{animation-delay:460ms}.hero .creds{animation-delay:560ms}
+@keyframes heroUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* content rises in the first time it is seen. The script adds these classes, so nothing is hidden without it. */
+.rv{opacity:0;translate:0 24px}
+.rvx{transition:opacity 700ms var(--ease-out),translate 850ms var(--ease-arrive)!important;transition-delay:var(--d,0ms)!important}
+@media print{.rv{opacity:1!important;translate:none!important}}
+
+/* timeline thread down Selected work: the gold line follows the reader, each year lights as it passes */
+.rows{position:relative}
+.thread{position:absolute;top:0;bottom:0;left:10px;width:2px;background:var(--line);z-index:3;pointer-events:none}
+.thread i{position:absolute;inset:0;background:var(--gold);transform-origin:top;transform:scaleY(var(--p,0))}
+.row{position:relative}
+.row::after{content:"";position:absolute;left:4px;top:37px;width:10px;height:10px;border-radius:50%;background:var(--paper);border:2px solid var(--line);z-index:4;transition:background-color 300ms var(--ease-out),border-color 300ms var(--ease-out),transform 300ms var(--ease-out)}
+.row.dark::after{background:var(--navy);border-color:var(--navy-line)}
+.row.lit::after{background:var(--gold);border-color:var(--gold);transform:scale(1.2)}
+@media(max-width:899.98px){.row{padding-left:34px}}
+@media(min-width:900px){.thread{left:13px}.row::after{left:7px;top:43px}}
+
+/* phone menu: the sheet unfolds and the links arrive one after another */
+#mnav.opening{animation:sheetIn 420ms var(--ease-arrive) both}
+#mnav.opening a{animation:linkIn 520ms var(--ease-arrive) both;animation-delay:calc(90ms + var(--i,0) * 45ms)}
+@keyframes sheetIn{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes linkIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+#menuBtn svg{transition:transform 260ms var(--ease-out)}
+#menuBtn[aria-expanded="true"] svg{transform:rotate(90deg)}
+
+/* photos sit in a frame so they can zoom without spilling */
+.zoom{display:block;overflow:hidden;background:var(--mist)}
+.jf{overflow:hidden}
+
+/* hover, on devices with a mouse */
+@media (hover:hover) and (pointer:fine){
+  .row{isolation:isolate}
+  .row::before{content:"";position:absolute;inset:0;background:var(--surface);transform:scaleX(0);transform-origin:left;transition:transform 560ms var(--ease-arrive);z-index:-1}
+  .row.dark::before{background:var(--navy-2)}
+  .row:hover{background:transparent}
+  .row.dark,.row.dark:hover{background:var(--navy)}
+  .row:hover::before{transform:scaleX(1)}
+  .row h3{transition:transform 420ms var(--ease-arrive)}
+  .row:hover h3{transform:translateX(6px)}
+
+  .pub{position:relative}
+  .pub::before{content:"";position:absolute;left:-16px;top:16px;bottom:16px;width:2px;background:var(--gold);transform:scaleY(0);transition:transform 320ms var(--ease-out)}
+  .pub:hover::before{transform:scaleY(1)}
+
+  .exp figure{transition:transform 520ms var(--ease-arrive),box-shadow 520ms var(--ease-arrive)}
+  .exp article:hover figure{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .exp figure img{transition:clip-path 650ms var(--ease-arrive),transform 1000ms var(--ease-arrive)}
+  .exp article:nth-child(3) figure img{transition-delay:320ms,0ms}
+  .exp article:hover figure img{transform:scale(1.05)}
+
+  .zoom img,.jf img{transition:transform 1000ms var(--ease-arrive)}
+  .talk figure:hover .zoom img,.jf:hover img{transform:scale(1.045)}
+  .talk .pics figure{transition:transform 520ms var(--ease-arrive)}
+  .talk .pics figure:hover{transform:translateY(-4px)}
+
+  .rel-card .tag-box{transition:background-color 260ms var(--ease-out),color 260ms var(--ease-out),border-color 260ms var(--ease-out)}
+  .rel-card:hover .tag-box{background:var(--navy);color:var(--gold-soft);border-color:var(--navy)}
+
+  .dl{position:relative;transition:background-color 300ms var(--ease-out)}
+  .dl::before{content:"";position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 520ms var(--ease-arrive)}
+  .dl:hover{background:var(--paper)}
+  .dl:hover::before{transform:scaleX(1)}
+  .dl:hover .dlbtn{background:var(--ink);color:var(--paper)}
+
+  .stat{transition:background-color 300ms var(--ease-out)}
+  .stat:hover{background:var(--surface)}
+
+  .cov .arrow,.prof .link .arrow,.cl-p .arrow,.jl .arrow{transition:transform 260ms var(--ease-out)}
+  .cov a:hover .arrow,.cl-p:hover .arrow,.jl a:hover .arrow{transform:translate(3px,-3px)}
+  .prof .link:hover .arrow{transform:translateX(4px)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero .sub,.hero .body,.hero .btns,.hero .creds{animation-name:fadeOnly!important}
+  #mnav.opening,#mnav.opening a{animation:none!important}
+  #menuBtn[aria-expanded="true"] svg{transform:none}
+  .row:hover h3,.exp article:hover figure,.exp article:hover figure img,.talk figure:hover .zoom img,.talk .pics figure:hover,.jf:hover img{transform:none}
+}
 </style>
 </head>
 <body>
@@ -610,6 +698,7 @@ a.who-li:hover h4{text-decoration:underline;text-underline-offset:3px}
       <p class="lead">Four projects from 2014 to now, in the order they happened.</p>
     </div>
     <div class="rows">
+      <div class="thread" aria-hidden="true"><i id="threadLine"></i></div>
       <a class="row" href="https://doi.org/10.1126/science.1259657" target="_blank" rel="noopener">
         <div class="yr">2014</div>
         <div><div class="eyebrow">Kenema Government Hospital · Broad Institute</div><h3>Confirming and sequencing Ebola in Kenema</h3><p>I was part of the laboratory team that confirmed Sierra Leone's first Ebola case in May 2014. Over the following weeks we sequenced 99 virus genomes from 78 patients. Science published them in August 2014, and the paper has been cited more than 1,600 times.</p></div>
@@ -809,8 +898,8 @@ a.who-li:hover h4{text-decoration:underline;text-underline-offset:3px}
     <div class="talks">
       <div class="talk">
         <div class="pics two">
-          <figure><img src="assets/img/talk_copenhagen.jpg" alt="Mambu Momoh speaking at a lectern below a slide about the Ebola response in Kenema" width="899" height="676" loading="lazy"><figcaption>Speaking at UN City. Photo: Viral Hemorrhagic Fever Consortium</figcaption></figure>
-          <figure><img src="assets/img/uncity_full.jpg" alt="Mambu Momoh outside the UN City entrance in Copenhagen" width="700" height="933" loading="lazy"><figcaption>UN City, Copenhagen</figcaption></figure>
+          <figure><span class="zoom"><img src="assets/img/talk_copenhagen.jpg" alt="Mambu Momoh speaking at a lectern below a slide about the Ebola response in Kenema" width="899" height="676" loading="lazy"></span><figcaption>Speaking at UN City. Photo: Viral Hemorrhagic Fever Consortium</figcaption></figure>
+          <figure><span class="zoom"><img src="assets/img/uncity_full.jpg" alt="Mambu Momoh outside the UN City entrance in Copenhagen" width="700" height="933" loading="lazy"></span><figcaption>UN City, Copenhagen</figcaption></figure>
         </div>
         <div class="body">
           <div class="d">December 2019 · UN City, Copenhagen</div>
@@ -820,7 +909,7 @@ a.who-li:hover h4{text-decoration:underline;text-underline-offset:3px}
         </div>
       </div>
       <div class="talk flip">
-        <div class="pics"><figure class="poster"><img src="assets/img/wistar.jpg" alt="Easel in the Wistar Institute lobby with a poster for the special seminar Surviving Ebola: One Man, Three Experiences, Friday September 20, 2019" width="700" height="875" loading="lazy"><figcaption>Grossman Auditorium, the Wistar Institute</figcaption></figure></div>
+        <div class="pics"><figure class="poster"><span class="zoom"><img src="assets/img/wistar.jpg" alt="Easel in the Wistar Institute lobby with a poster for the special seminar Surviving Ebola: One Man, Three Experiences, Friday September 20, 2019" width="700" height="875" loading="lazy"></span><figcaption>Grossman Auditorium, the Wistar Institute</figcaption></figure></div>
         <div class="body">
           <div class="d">20 September 2019 · The Wistar Institute, Philadelphia</div>
           <h3>Surviving Ebola: One Man, Three Experiences</h3>
@@ -946,9 +1035,10 @@ a.who-li:hover h4{text-decoration:underline;text-underline-offset:3px}
   var mb=$('menuBtn'), mn=$('mnav');
   function menu(open){
     mn.hidden=!open; mb.setAttribute('aria-expanded',String(open)); mb.setAttribute('aria-label',open?'Close menu':'Open menu');
-    if(open){hdr.style.setProperty('--sheet-h',Math.max(240,window.innerHeight-hdr.getBoundingClientRect().bottom)+'px');}
+    if(open){hdr.style.setProperty('--sheet-h',Math.max(240,window.innerHeight-hdr.getBoundingClientRect().bottom)+'px');mn.classList.remove('opening');void mn.offsetWidth;mn.classList.add('opening');}
     root.style.overflow=open?'hidden':'';
   }
+  mn.querySelectorAll('a').forEach(function(a,i){a.style.setProperty('--i',i);});
   mb.addEventListener('click',function(){menu(mn.hidden);});
   mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu(false);});});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!mn.hidden){menu(false);mb.focus();}});
@@ -964,6 +1054,7 @@ a.who-li:hover h4{text-decoration:underline;text-underline-offset:3px}
   function show(i,focus){
     tabs.forEach(function(t,j){var on=j===i;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;var p=$('fp'+j);if(p)p.hidden=!on;});
     var pnl=$('fp'+i);
+    if(pnl){pnl.classList.remove('rv');}
     if(pnl)pnl.querySelectorAll('.fig,.txt').forEach(function(el){el.classList.remove('swap');void el.offsetWidth;el.classList.add('swap');});
     if(focus) tabs[i].focus();
   }
@@ -976,6 +1067,18 @@ a.who-li:hover h4{text-decoration:underline;text-underline-offset:3px}
     });
   });
 
+  /* timeline thread in Selected work */
+  var rowsBox=document.querySelector('.rows'), threadLine=$('threadLine'), rowEls=rowsBox?[].slice.call(rowsBox.querySelectorAll('.row')):[];
+  function paintThread(){
+    if(!rowsBox||!threadLine)return;
+    var r=rowsBox.getBoundingClientRect(), mark=window.innerHeight*0.62;
+    var p=reduce?1:Math.max(0,Math.min(1,(mark-r.top)/r.height));
+    threadLine.style.setProperty('--p',p.toFixed(4));
+    var y=r.top+p*r.height;
+    rowEls.forEach(function(el){el.classList.toggle('lit',reduce||y>=el.getBoundingClientRect().top+44);});
+  }
+  window.addEventListener('resize',paintThread);
+
   /* header: reading progress and the current section */
   var prog=$('prog'), ticking=false;
   function onScroll(){
@@ -983,6 +1086,8 @@ a.who-li:hover h4{text-decoration:underline;text-underline-offset:3px}
     requestAnimationFrame(function(){
       var max=root.scrollHeight-window.innerHeight;
       prog.style.transform='scaleX('+(max>0?Math.min(1,window.scrollY/max):0)+')';
+      hdr.classList.toggle('scrolled',window.scrollY>8);
+      paintThread();
       ticking=false;
     });
   }
@@ -1057,12 +1162,12 @@ a.who-li:hover h4{text-decoration:underline;text-underline-offset:3px}
       e.preventDefault(); if(j>=0&&j<wells.length)pick(j,true);
     });
   });
-  paintPlate();
   if(wellsBox&&wells.length&&!reduce&&'IntersectionObserver' in window&&wellsBox.getBoundingClientRect().top>window.innerHeight){
     wellsBox.classList.add('pre');
     var pio=new IntersectionObserver(function(es){if(es[0].isIntersecting){wellsBox.classList.remove('pre');pio.disconnect();setTimeout(function(){wellsBox.classList.add('done');},2200);}},{rootMargin:'0px 0px -25% 0px'});
     pio.observe(wellsBox);
   }else if(wellsBox){wellsBox.classList.add('done');}
+  paintPlate();
 
   /* live figures: OpenAlex for citations and newest papers, WHO for outbreak notices.
      Everything on the page already shows a saved figure; these calls only replace it when they succeed. */
@@ -1114,6 +1219,26 @@ a.who-li:hover h4{text-decoration:underline;text-underline-offset:3px}
       });
       $('whoSrc').textContent='WHO Disease Outbreak News on Ebola, Marburg and Lassa fever, read just now.'; $('whoDot').classList.add('on');
     }).catch(function(){});
+  }
+
+  /* content rises in the first time it is seen; only what starts below the fold waits */
+  var RV=['.sh h2','.sh .lead','.rel-head','.rel-card','.rows .row','.fw .tabs','.fw .panel','.stat','.live-line','.recs .rec','.plate-read','.newest','.pubs .pub','.more-btn','.cl-row','.prof','.cov-h','.cov a','.about .prose p','.glance div','.three-h','.xp-row','.talk','.more-talks div','.jwrap h3.col','.jwrap .li','.who-src','.dl','.cta-top h2','.cta-top .btn','.reach div','#msgForm','.foot>div'];
+  if(!reduce&&'IntersectionObserver' in window){
+    var fold=window.innerHeight, waiting=[];
+    document.querySelectorAll(RV.join(',')).forEach(function(el){
+      if(el.closest('.exp,#plateFig .plate-body'))return;
+      if(el.getBoundingClientRect().top>fold){el.classList.add('rv','rvx');waiting.push(el);}
+    });
+    var rio=new IntersectionObserver(function(es){
+      var hits=es.filter(function(e){return e.isIntersecting;}).map(function(e){return e.target;});
+      hits.sort(function(a,b){return a.compareDocumentPosition(b)&Node.DOCUMENT_POSITION_FOLLOWING?-1:1;});
+      hits.forEach(function(el,k){
+        el.style.setProperty('--d',Math.min(k,6)*70+'ms');
+        el.classList.remove('rv'); rio.unobserve(el);
+        setTimeout(function(){el.classList.remove('rvx');el.style.removeProperty('--d');},1400+Math.min(k,6)*70);
+      });
+    },{rootMargin:'0px 0px -8% 0px'});
+    waiting.forEach(function(el){rio.observe(el);});
   }
 
   var exp=document.querySelector('.exp');
